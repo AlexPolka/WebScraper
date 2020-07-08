@@ -7,7 +7,7 @@ class Scraper:
         self.site = site
     #This function does the actual scraping
     def scrape(self):
-        #this makes a request to the website
+        #makes a request to the website
         r = urllib.request.urlopen(self.site)
         html = r.read()
         parser = "html.parser"
@@ -18,5 +18,5 @@ class Scraper:
             print("\n" + url)
 
 
-news = "https://news.google.com"
-Scraper(news).scrape()
+scrape = Scraper("https://news.google.com")
+scrape.scrape()
